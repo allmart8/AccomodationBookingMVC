@@ -1,0 +1,29 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+
+# Rider / VS Code
+.idea/
+*.swp
+.vscode/
+
+# Пользовательские файлы
+*.userprefs
+
+# Пакеты
+*.nupkg
+packages/
+
+# Папки / файлы публикации
+publish/
+
+# Конфигурации, которые не надо коммитить (если будут)
+appsettings.Development.json
+appsettings.Local.json

@@ -1,0 +1,42 @@
+﻿@model AccomodationBookingMVC.Models.Premise
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Premise</h4>
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.PremiseName)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.PremiseName)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Address)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Address)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.RoomCount)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.RoomCount)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Area)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Area)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.HasRestroom)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.HasRestroom)</dd>
+
+        <!-- Исправлено -->
+        <dt class="col-sm-2">Owner</dt>
+        <dd class="col-sm-10">@Model.Owner.FullName</dd>
+
+        <dt class="col-sm-2">Premise Type</dt>
+        <dd class="col-sm-10">@Model.PremiseType.TypeName</dd>
+
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PremiseId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
